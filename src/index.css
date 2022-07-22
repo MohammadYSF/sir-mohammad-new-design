@@ -1,8 +1,46 @@
+@font-face {
+  font-family: Vazirmatn;
+  src:url('../node_modules/vazirmatn/fonts/ttf/Vazirmatn-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src:url('../node_modules/vazirmatn/fonts/ttf/Vazirmatn-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src:url('../node_modules/vazirmatn/fonts/ttf/Vazirmatn-Black.ttf');
+
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src:url('../node_modules/vazirmatn/fonts/ttf/Vazirmatn-Medium.ttf');
+
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src:url('../node_modules/vazirmatn/fonts/ttf/Vazirmatn-Light.ttf');
+
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src:url('../node_modules/vazirmatn/fonts/ttf/Vazirmatn-Thin.ttf');
+
+  font-weight: 100;
+  font-style: normal;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Vazirmatn, sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
