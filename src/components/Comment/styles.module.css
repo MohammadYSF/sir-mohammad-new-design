@@ -1,0 +1,11 @@
+.customInput{
+    border-radius: 0 !important;
+
+}
+.customInput:focus{
+    box-shadow: none !important;
+    border-color: #198754 !important;
+}
+.customCard{
+    box-shadow: 2px 2px 15px #198754;
+}

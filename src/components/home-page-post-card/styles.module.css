@@ -1,0 +1,11 @@
+.card{
+
+}
+.cardBody{
+    box-shadow: 4px 4px 15px lightgray;
+}
+.cardTitle:hover{
+    color: green;
+}
+.cardImg{
+}
