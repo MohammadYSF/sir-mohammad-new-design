@@ -9,6 +9,7 @@ import NavbarCustom from "./components/NavbarCustom/NavbarCustom";
 import {PostType} from "./types/PostType";
 import  {CommentType} from './types/CommentType';
 import Post from "./components/Post/Post";
+import { Test } from './components/NavbarCustom/Test';
 const dataComment:CommentType[] = [
     {
         commentId:1,
@@ -32,7 +33,7 @@ const dataPost: PostType = {
     postId: 1,
     postAuthorName: 'محمد یوسفیان',
     postCategoryName: 'نقد کتاب',
-    postTitle: 'رستگاری : داستان تحول یک اشرافی',
+    postTitle: 'این یک عنوان تست برای مقاله است',
     postDescription: 'لئون تولستوی (یا لی یو تالستوی) و یک رمان جذاب که در خیلی از مواقع نمی توان کتاب را زمین گذاشت ( و بعضی مواقع نمی توان در دست نگه داشت)',
     postDate: new Date(),
     postText: 'آیا شخصی که خود گناهکار است ، می تواند مانع گناه دیگران بشود؟ اشخاصی که خود آلوده بودند ، خیال می کردند که می توانند آلودگی دیگران را از راه مجازات پاک کنند و نتیجه این بود که همه ، خواه توانا یا تنگدست کارشان نجات دیگران از راه مجازات بود و با این به اصطلاح اصلاخ باعث می شدند که خود منحرف تر و فاسد تر از آنچه بودند ، بشوند و مجازات شوندگان را فاسد تر از آنچه بودند بکنند\n' +
