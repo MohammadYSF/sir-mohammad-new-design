@@ -1,0 +1,26 @@
+.loginForm{
+    margin-top: 5rem !important;
+    background-color: rgba(24,135,69 , .9);
+    padding: 50px 50px 20px 50px;
+}
+.loginInput{
+    border-radius: 0px !important;
+    background-color: transparent !important;
+    border-top: none !important;
+    border-color: #aaa !important;
+    color: #eee !important;
+}
+.loginInputLabel{
+    color: #fff;
+}
+.loginInput:focus{
+    box-shadow: none !important;
+    border-color: #ddd !important;
+}
+.loginSubmitBtn{
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-right: 40px !important;
+    padding-left: 40px !important;
+    border-radius: 0px !important;
+}
