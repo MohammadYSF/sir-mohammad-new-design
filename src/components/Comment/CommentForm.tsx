@@ -16,7 +16,7 @@ const CommentForm: React.FC<props> = (): JSX.Element => {
     }
     console.log(errors);
     return (
-        <Form onSubmit={handleSubmit(onSubmit)} className={' w-50 mx-auto'}>
+        <Form onSubmit={handleSubmit(onSubmit)} className={'mx-auto'}>
             <Form.Group>
                 <Form.Control placeholder="نام"
                               {...register("name",

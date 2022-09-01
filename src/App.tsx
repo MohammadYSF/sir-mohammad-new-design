@@ -12,16 +12,18 @@ import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import { Home } from './components/home/Home';
 import { Login } from './components/Login/Login';
 import "bootstrap/dist/css/bootstrap.rtl.min.css";
+import { CustomLayout } from './components/layout/CustomLayout';
 function App() {
     return (
-        <div className="container-fluid">
+        <CustomLayout>
             <BrowserRouter>
                 <Routes>
                     <Route path='/' element={<Home />} />
+                    <Route path='/post/:id' element={<Post />} />
                     <Route path='/login' element={<Login />} />
                 </Routes>
             </BrowserRouter>
-        </div>
+        </CustomLayout>
     );
 }
 
