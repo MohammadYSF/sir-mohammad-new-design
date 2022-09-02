@@ -1,4 +1,5 @@
 $green-color:#198754;
+
 .base-text-input {
     border-radius: 0px;
     border-color: #ced4da;
@@ -75,4 +76,27 @@ $red-color:#DE254A;
 }
 .search-count{
     color: $green-color;
+}
+
+// contact
+.contact-h1{
+    color: $green-color;
+}
+.contact-icon-link{
+    text-decoration: none;
+    color: lighten($green-color , 10%);
+    &:hover{
+        color: $green-color;
+    }
+}
+
+// about
+.about-h1{
+    color: $green-color;
+}
+
+// footer
+.footer{
+    background-color: lighten($color: $green-color, $amount: 60%);
+    margin-bottom: 0px !important;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {PostCard} from "./components/home-page-post-card/PostCard";
+import { PostCard } from "./components/home-page-post-card/PostCard";
 import CommentForm from "./components/Comment/CommentForm";
 import Comment from "./components/Comment/Comment";
 import { PostType } from "./types/PostType";
@@ -14,14 +14,18 @@ import "bootstrap/dist/css/bootstrap.rtl.min.css";
 import { CustomLayout } from './components/layout/CustomLayout';
 import { PostsSearchResult } from './components/postsSearchResult/PostsSearchResult';
 import { PostsArchive } from './components/postsArchive/PostsArchive';
+import { Contact } from './components/contact/Contact';
+import { About } from './components/about/About';
 function App() {
     return (
         <BrowserRouter>
             <CustomLayout>
 
                 <Routes>
-                    <Route path='/'  element={<Home />} />
-                    <Route path='/login'  element={<Login />} />
+                    <Route path='/' element={<Home />} />
+                    <Route path='/login' element={<Login />} />
+                    <Route path='/contact' element={<Contact />} />
+                    <Route path='/about' element={<About />} />
                     <Route path='/posts/:id' element={<Post />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/search/:searchText' element={<PostsSearchResult />} />
