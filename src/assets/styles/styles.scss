@@ -4,11 +4,11 @@ $green-color:#198754;
     border-color: #ced4da;
 
     &:focus {
-        border-color: #198754;
+        border-color: $green-color;
         box-shadow: none;
     }
 }
-
+$red-color:#DE254A;
 @mixin base-btn($color, $bg-color) {
 
     border-radius: 0px;
@@ -31,10 +31,48 @@ $green-color:#198754;
 }
 
 .navbar-search-btn {
-    @include base-btn(#fff, #198754);
+    @include base-btn(#fff, $green-color);
 }
 .active-nav-link{
     color: $green-color !important;
     font-weight: bold;
     
+}
+
+// card styles :
+.card-body{
+    border-bottom: 1px solid #ddd !important;
+
+}
+
+.card-title{
+    color: darken($green-color,5%);
+    text-decoration: none;
+
+
+    &:hover{
+        color: lighten($green-color , 10%);
+        cursor: pointer;
+    }
+}
+.card-date{
+
+}
+
+
+// navbar
+.navbar-search-form-error-input{
+    &::placeholder{
+        color: $red-color;
+        font-size: .8rem;
+    }
+}
+
+
+// search result\
+.search-text{
+    color: $green-color;
+}
+.search-count{
+    color: $green-color;
 }

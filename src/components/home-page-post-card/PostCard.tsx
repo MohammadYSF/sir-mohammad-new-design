@@ -3,27 +3,35 @@ import Card from 'react-bootstrap/Card';
 import Row from "react-bootstrap/Row";
 import { Col } from "react-bootstrap";
 import classes from './styles.module.css';
-export default class PostCard extends React.Component {
-    render() {
-        return (
-            <Card className={`border-0  mt-5 ${classes.card}`}>
+import { PostType } from "../../types/PostType";
+import { Link } from "react-router-dom";
+interface propsType extends PostType {
+
+}
+export const PostCard: React.FC<propsType> = (props: propsType) => {
+    return (
+        <>
+            <Card className={`border-0  mt-4`}>
                 <Row>
                     <Col md={2}>
-                        <Card.Img className={`img-fluid rounded-0 ${classes.cardImg}`}
-                            src="http://sirmohammad.ir/Images/Posts/MainImages/100x100/3ba67729-6daf-4be6-aed3-66f6737efad5.jpg"
-                             />
+                        <Card.Img className={`img-fluid rounded-0`}
+                            src={props.postImageUrl}
+                        />
                     </Col>
                     <Col md={10}>
 
-                        <Card.Body className = {`text-right ${classes.cardBody}`}>
-                                <Card.Title className={classes.cardTitle}>قلعه حیوانات کتاب روشنگری</Card.Title>
-                                <Card.Text>قلعه حیوانات ، کتابی که جرج اورل ، نویسنده کتاب را به اوج شهرت رساند ،
-                                    را می توان یکی از بهترین کتاب های نوشته شده در قرن بیستم خواند</Card.Text>
-                                <Card.Text><small className="text-muted">نوشته در 22 بهمن 1400</small></Card.Text>
+                        <Card.Body className={`text-right card-body`}>
+                            <Card.Title as={Link} to={`/posts/${props.postId}`} className={'h5 card-title'}>{props.postTitle}</Card.Title>
+                            <Card.Text>{props.postDescription}</Card.Text>
+                            <Card.Text><small className="text-muted">نوشته شده در 
+                                <span className="card-date">
+                                {new Intl.DateTimeFormat('fa-IR', { day: '2-digit', month: 'short', year: 'numeric' }).format(new Date(props.postDate))}
+                                </span>
+                            </small></Card.Text>
                         </Card.Body>
                     </Col>
                 </Row>
             </Card>
-        );
-    }
+        </>
+    );
 }

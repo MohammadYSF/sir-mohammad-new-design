@@ -1,14 +1,16 @@
 import { Button, Container, Form, Nav, Navbar, NavDropdown, NavLink, Offcanvas } from "react-bootstrap";
 import "../../assets/styles/styles.scss";
-import {FaSearch} from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
-import context from "react-bootstrap/esm/AccordionContext";
+import { NavbarSearchForm } from "./NavbarSearchForm";
 interface propsType {
     expand: string
 };
+
 export const CustomNavbar = ({ expand }: propsType) => {
+  
     const location = useLocation();
-    const {pathname} = location;
+    const { pathname } = location;
     const splitLocation = pathname.split("/");
     return (
         <>
@@ -28,24 +30,14 @@ export const CustomNavbar = ({ expand }: propsType) => {
                     </Offcanvas.Header>
                     <Offcanvas.Body>
                         <Nav className="justify-content-start flex-grow-1 pe-3">
-                            <Nav.Link as={Link} to="/" className={`${splitLocation[1] == ''?"active-nav-link":''}`}>خانه</Nav.Link>
-                            <Nav.Link as={Link} to="/posts" className={`${splitLocation[1] == 'posts'?"active-nav-link":''}`}>نوشته های من</Nav.Link>
-                            <Nav.Link as={Link} to="/about" className={`${splitLocation[1] == 'about'?"active-nav-link":''}`}>درباره من</Nav.Link>
-                            <Nav.Link as={Link} to="/contact" className={`${splitLocation[1] == 'contact'?"active-nav-link":''}`}>تماس با من</Nav.Link>
-                            <Nav.Link as={Link} to="/login" className={`${splitLocation[1] == 'login'?"active-nav-link":''}`}>لاگین</Nav.Link>
-                          
+                            <Nav.Link as={Link} to="/" className={`${splitLocation[1] == '' ? "active-nav-link" : ''}`}>خانه</Nav.Link>
+                            <Nav.Link as={Link} to="/postsArchive" className={`${splitLocation[1] == 'postsArchive' ? "active-nav-link" : ''}`}>نوشته های من</Nav.Link>
+                            <Nav.Link as={Link} to="/about" className={`${splitLocation[1] == 'about' ? "active-nav-link" : ''}`}>درباره من</Nav.Link>
+                            <Nav.Link as={Link} to="/contact" className={`${splitLocation[1] == 'contact' ? "active-nav-link" : ''}`}>تماس با من</Nav.Link>
+                            <Nav.Link as={Link} to="/login" className={`${splitLocation[1] == 'login' ? "active-nav-link" : ''}`}>لاگین</Nav.Link>
+
                         </Nav>
-                        <Form className="d-flex">
-                            <Form.Control
-                                type="search"
-                                placeholder="تايپ کن"
-                                className="me-2 base-text-input"
-                                aria-label="Search"
-                            />
-                            <Button variant="" className="navbar-search-btn" >
-                                <FaSearch />
-                            </Button>
-                        </Form>
+                     <NavbarSearchForm />
                     </Offcanvas.Body>
                 </Navbar.Offcanvas>
 
