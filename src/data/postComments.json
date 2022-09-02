@@ -1,0 +1,16 @@
+[
+    {
+        "commentId": 1,
+        "postId": 1,
+        "commentText": "سلام این عنوان یک کامنت است",
+        "commentDate": "2022-05-05",
+        "commentAuthor": "محمد یوسفیان"
+    },
+    {
+        "commentId": 2,
+        "postId": 1,
+        "commentText": "سلام این عنوان یک کامنت است",
+        "commentDate": "2022-05-05",
+        "commentAuthor": "محمد یوسفیان"
+    }
+]

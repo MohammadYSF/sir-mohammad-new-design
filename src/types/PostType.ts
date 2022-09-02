@@ -7,9 +7,8 @@ export interface PostType {
     postText: string,
     postCategoryName: string,
     postAuthorName: string,
-    postDate: Date,
+    postDate:string,
     authorImageUrl:string,
     postImageUrl: string,
     postKeywords:string[]
-    comments: CommentType[]
 };

@@ -3,5 +3,5 @@ export interface CommentType {
     postId:number,
     commentAuthor: string,
     commentText: string,
-    commentDate: Date
+    commentDate: string
 }

@@ -1,0 +1,40 @@
+$green-color:#198754;
+.base-text-input {
+    border-radius: 0px;
+    border-color: #ced4da;
+
+    &:focus {
+        border-color: #198754;
+        box-shadow: none;
+    }
+}
+
+@mixin base-btn($color, $bg-color) {
+
+    border-radius: 0px;
+    color: $color;
+    border-color: $color;
+    background-color: $bg-color;
+
+    &:hover {
+        color: $color;
+        border-color: $color;
+        background-color: $bg-color;
+    }
+
+    &:focus {
+        box-shadow: none;
+        outline: none;
+        color: $color;
+        background-color: darken($bg-color, 10%);
+    }
+}
+
+.navbar-search-btn {
+    @include base-btn(#fff, #198754);
+}
+.active-nav-link{
+    color: $green-color !important;
+    font-weight: bold;
+    
+}

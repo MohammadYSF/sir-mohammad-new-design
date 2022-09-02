@@ -15,15 +15,18 @@ import "bootstrap/dist/css/bootstrap.rtl.min.css";
 import { CustomLayout } from './components/layout/CustomLayout';
 function App() {
     return (
-        <CustomLayout>
-            <BrowserRouter>
+        <BrowserRouter>
+            <CustomLayout>
+
                 <Routes>
-                    <Route path='/' element={<Home />} />
+                    <Route path='/'  element={<Home />} />
+                    <Route path='/login'  element={<Login />} />
                     <Route path='/post/:id' element={<Post />} />
                     <Route path='/login' element={<Login />} />
                 </Routes>
-            </BrowserRouter>
-        </CustomLayout>
+            </CustomLayout>
+
+        </BrowserRouter>
     );
 }
 
