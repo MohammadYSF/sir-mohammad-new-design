@@ -1,10 +1,17 @@
-import { Table } from "react-bootstrap";
+import { Button, Form, Table } from "react-bootstrap";
+import { useForm } from "react-hook-form";
 import { FaInstagram, FaLinkedin, FaPaperPlane, FaTelegram } from "react-icons/fa";
+import { BaseErrorMessage } from "../base/baseInput/BaseErrorMessage";
+import { BaseTextBox } from "../base/baseInput/BaseTextBox";
 
 interface propsType {
 
 }
 export const Contact: React.FC<propsType> = (props: propsType) => {
+    const { register, formState: { errors }, handleSubmit } = useForm();
+    const onSubmitForm = (data: any) => {
+        console.log(data);
+    }
     return (
         <>
             <h1 className="contact-h1">تماس با من</h1>
@@ -46,6 +53,30 @@ export const Contact: React.FC<propsType> = (props: propsType) => {
                     </tr>
                 </tbody>
             </Table>
+            {/* my form */}
+            <div>
+                <BaseTextBox isTextArea={false} name="Name" MaxLen={100} defaultValue="" isRequired={true}
+                    maxLenMessage="طول رشته زیاد است"
+                    placeholder="نام خود را وارد کنید" requiredMessage="پر کردن این فیلد اجباری است" register={register} />
+                <BaseErrorMessage errorMessage={errors.Name?.message} />
+                <BaseTextBox isTextArea={false} className="mt-2" name="Email" MaxLen={200} defaultValue="" placeholder="ایمیل خود را وارد کنید"
+                    isRequired={true} maxLenMessage="طول رشته زیاد است"
+                    requiredMessage="پر کردن این فیلد اجباری است" register={register} />
+                <BaseErrorMessage errorMessage={errors.Email?.message} />
+
+                <BaseTextBox textAreaRows={10} isTextArea={true} className="mt-2" name="Text" defaultValue="" placeholder="ایمیل خود را وارد کنید"
+                    isRequired={true}
+                    requiredMessage="پر کردن این فیلد اجباری است" register={register} />
+                <BaseErrorMessage errorMessage={errors.Text?.message} />
+                <div className="d-block">
+                    <Button className="btn-dark rounded-0 mt-1" onClick={handleSubmit(onSubmitForm)}>ثبت</Button>
+                </div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </div>
         </>
     );
 }
