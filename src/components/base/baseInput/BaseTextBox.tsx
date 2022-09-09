@@ -11,14 +11,15 @@ interface propsType {
     defaultValue?: string,
     className?: string,
     isTextArea: boolean,
-    textAreaRows?: number
+    textAreaRows?: number,
+    type?: string
 }
 export const BaseTextBox = (props: propsType) => {
     return (
         <>
             {props.register !== undefined
                 ? props.isTextArea === false ?
-                    <input defaultValue={props.defaultValue === undefined ? "" : props.defaultValue}
+                    <input type={props.type} defaultValue={props.defaultValue === undefined ? "" : props.defaultValue}
                         className={`form-control base-text-input ${props.className}`} id={props.id} placeholder={props.placeholder}
                         {...props.register(props.name, {
                             required: {
@@ -44,7 +45,7 @@ export const BaseTextBox = (props: propsType) => {
                             }
                         })}></textarea>
                 : props.isTextArea === false ?
-                    <input className={`form-control base-text-input ${props.className}`} name={props.name} id={props.id} placeholder={props.placeholder} />
+                    <input type={props.type} className={`form-control base-text-input ${props.className}`} name={props.name} id={props.id} placeholder={props.placeholder} />
                     :
                     <textarea rows={props.textAreaRows} className={`form-control base-text-input ${props.className}`} name={props.name}
                         id={props.id} placeholder={props.placeholder}></textarea>

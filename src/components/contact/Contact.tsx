@@ -71,11 +71,7 @@ export const Contact: React.FC<propsType> = (props: propsType) => {
                 <div className="d-block">
                     <Button className="btn-dark rounded-0 mt-1" onClick={handleSubmit(onSubmitForm)}>ثبت</Button>
                 </div>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
+              
             </div>
         </>
     );

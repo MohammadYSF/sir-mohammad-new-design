@@ -12,7 +12,11 @@ export const CustomLayout = ({ children }: LayoutType) => {
                 {children}
             </Container>
             <Footer />
-
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
         </>
     );
 }
